@@ -1,110 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TRENG+ Documentation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
     <header>
-        <h1>TRENG+ Documentation</h1>
         <nav>
             <ul>
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#core-technologies">Core Technologies</a></li>
-                <li><a href="#optional-database">Optional: Database Integration</a></li>
-                <li><a href="#use-cases">Ideal Use Cases</a></li>
+                <li><a href="#ideal-use-cases">Ideal Use Cases</a></li>
                 <li><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#code-documentation-testing">Code Documentation and Testing</a></li>
+                <li><a href="#troubleshooting">Troubleshooting and FAQs</a></li>
+                <li><a href="#database-integration">Database Integration</a></li>
+                <li><a href="#contribution">Contribution Guidelines and Roadmap</a></li>
+                <li><a href="#changelog">Changelog</a></li>
+                <li><a href="#resources">Additional Resources</a></li>
+                <li><a href="#license">License</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <section>
+            <h1>TRENG+ Documentation</h1>
+            <p><strong>TRENG+</strong> is a next-generation full-stack solution designed to build high-performance, real-time, interactive 3D web applications. By combining powerful frontend 3D rendering with scalable backend services and edge deployments, TRENG+ empowers developers to create immersive digital experiences using a modern, JavaScript-centered ecosystem.</p>
+        </section>
+
         <section id="introduction">
             <h2>1. Introduction</h2>
-            <p>TRENG+ is a cutting-edge, full-stack solution designed for building high-performance, real-time interactive 3D web applications. It brings together the best of frontend and backend technologies to help developers create immersive experiences—from interactive visualizations and games to metaverse projects and AI-driven interfaces. TRENG+ is built to be flexible, secure, and future-proof, incorporating modern trends like WebAssembly (WASM) and cloud edge computing.</p>
-        <br>
+            <p>TRENG+ leverages industry-proven technologies to streamline development across the entire application lifecycle. Its core strengths include:</p>
+            <ul>
+                <li><strong>High-performance 3D rendering:</strong> Using Three.js with React Three Fiber and custom GLSL shaders.</li>
+                <li><strong>Unified JavaScript environment:</strong> Powered by React/Next.js on the frontend and Node.js (optionally with Express.js) on the backend.</li>
+                <li><strong>Enhanced performance with WebAssembly:</strong> For compute-intensive operations in both frontend and backend contexts.</li>
+                <li><strong>Global edge deployment:</strong> With platforms like Fleek, Cloudflare Workers, Netlify, or Vercel.</li>
+                <li><strong>Future-proof readiness:</strong> Designed to easily embrace emerging technologies such as WebGPU.</li>
+            </ul>
         </section>
 
         <section id="core-technologies">
             <h2>2. Core Technologies</h2>
+            <p>The TRENG+ stack consists of a powerful combination of frontend, backend, and additional components that enable smooth development and deployment:</p>
+            
             <h3>Frontend</h3>
             <ul>
-                <li><strong>Three.js</strong> - Provides state-of-the-art 3D rendering and WebGL support.</li>
-                <li><strong>React.js / Next.js</strong> - React.js: A robust library for building component-based user interfaces. Next.js: Extends React with features like server-side rendering (SSR) and static site generation (SSG) to boost performance and SEO.</li>
-                <li><strong>React Three Fiber & Drei</strong> - Seamlessly integrate Three.js into React. Offer a declarative, component-based approach to building and animating 3D scenes.</li>
-                <li><strong>GLSL (OpenGL Shading Language)</strong> - Allows for writing custom shaders that create unique visual effects. Empowers developers to fine-tune lighting, textures, and animations in real time.</li>
-                <li><strong>WebAssembly (WASM)</strong> - Enhances performance for compute-intensive tasks (e.g., complex 3D rendering and simulations).</li>
+                <li><strong>Three.js:</strong> Provides cutting-edge WebGL rendering for interactive 3D scenes.</li>
+                <li><strong>React.js / Next.js:</strong> For building dynamic, component-based user interfaces with optional server-side rendering (SSR) and static site generation (SSG).</li>
+                <li><strong>React Three Fiber & Drei:</strong> Seamlessly integrate Three.js into React using a declarative approach. Offers a declarative, component-based approach to building and animating 3D scenes.</li>
+                <li><strong>GLSL:</strong> Custom shaders to create unique visual effects and fine-tuned graphics.</li>
+                <li><strong>WebAssembly (WASM):</strong> Enhances performance for compute-intensive tasks (e.g., complex 3D rendering and simulations).</li>
             </ul>
+
             <h3>Backend</h3>
             <ul>
-                <li><strong>Node.js</strong> - An event-driven runtime that powers scalable server-side applications. Ideal for handling real-time data, API endpoints, and heavy I/O operations.</li>
-                <li><strong>Express.js (Optional)</strong> - Provides a flexible framework for building robust APIs and custom middleware.</li>
-                <li><strong>WebAssembly (WASM)</strong> - Increasingly leveraged in server-side environments (such as with Node.js) to handle performance-critical computations like image processing, data compression, or running legacy code in a secure, sandboxed environment.</li>
+                <li><strong>Next.js:</strong> API routes are serverless functions that can be used to fetch data, handle authentication, and more</li>
+                <li><strong>Node.js:</strong> An event-driven runtime for scalable server-side logic.</li>
+                <li><strong>Express.js (Optional):</strong> A lightweight framework to create robust APIs and custom middleware if more advanced routing or server logic is needed.</li>
+                <li><strong>WebAssembly (WASM):</strong> Accelerates performance-critical tasks. In TRENG+, WASM can be integrated on the backend (with Node.js) for operations like image processing or data crunching.</li>
             </ul>
-            <h3>Additional Core Components</h3>
+
+            <h3>Additional Components</h3>
             <ul>
-                <li><strong>State Management</strong> - Tools like Redux, XState, or Zustand help manage complex UI states efficiently.</li>
-                <li><strong>Security</strong> - Integrated measures including JWT authentication, rate limiting, and WebSocket security safeguard your applications.</li>
-                <li><strong>Cloud Edge Computing</strong> - Deploy globally with platforms such as Fleek, Cloudflare Workers, AWS Lambda, Netlify, or Vercel.</li>
-                <li><strong>Future-Proof with WebGPU</strong> - TRENG+ is designed with an eye on emerging technologies.</li>
+                <li><strong>State Management:</strong> Use tools like Redux, XState, or Zustand for managing complex UI states.</li>
+                <li><strong>Security:</strong> Built-in features such as JWT authentication, rate limiting, and WebSocket security.</li>
+                <li><strong>Cloud Edge Computing:</strong> Deploy globally using Fleek, Cloudflare Workers, Netlify, or Vercel for low-latency performance.</li>
+                <li><strong>Future-Proofing with WebGPU:</strong> TRENG+ is structured to evolve as WebGPU becomes mainstream, offering native GPU-accelerated rendering.</li>
             </ul>
         </section>
 
-        <section id="optional-database">
-            <h2>3. Optional: Database Integration</h2>
-            <p>While the core TRENG+ stack does not mandate a specific database, you can easily integrate one based on your project needs. Options include:</p>
+                <section id="ideal-use-cases">
+            <h2>3. Ideal Use Cases</h2>
+            <ul>
+                <li><strong>Real-Time 3D Applications
+                <li><strong>Data Visualization Dashboards</strong></li>
+                <li><strong>Metaverse & AR/VR Projects</strong></li>
+                <li><strong>AI-Driven Interactive Experiences</strong></li>
+                <li><strong>Global Applications with Edge Computing</strong></li>
+            </ul>
+        </section>
+
+        <section id="getting-started">
+            <h2>4. Getting Started</h2>
+            <h3>Prerequisites</h3>
+            <ul>
+                <li><strong>Node.js and npm:</strong> Install the latest LTS version from nodejs.org.</li>
+                <li><strong>Code Editor:</strong> Visual Studio Code, Sublime Text, or any modern editor.</li>
+                <li><strong>Git/GitHub Actions:</strong> For source control and CI/CD integration.</li>
+            </ul>
+
+            <h3>Step-by-Step Setup</h3>
+            <ol>
+                <li>Clone the TRENG+ Repository:
+                    <pre><code>git clone the starter repo</code></pre>
+                </li>
+                <li>Install Dependencies:
+                    <pre><code># Frontend
+cd frontend
+npm install
+
+# Backend
+cd ../backend
+npm install</code></pre>
+                </li>
+                <li>Configure Environment Variables: Create a <code>.env</code> file in the backend directory for configuration (e.g., API keys, port numbers).</li>
+                <li>Run the Application:
+                    <pre><code># Start the backend
+npm run dev
+
+# Start the frontend (if using Next.js)
+npm run dev</code></pre>
+                </li>
+                <li>Verify Installation: Open your browser at the designated URL (e.g., <a href="http://localhost:3000">http://localhost:3000</a>) to see the application running.</li>
+            </ol>
+        </section>
+        
+       <section id="code-documentation-testing">
+            <h2>5. Code Documentation and Testing</h2>
+            <p>Good code documentation and rigorous testing are essential parts of building maintainable, scalable software.</p>
+            <h3>Inline Documentation</h3>
+            <ul>
+                <li>Use JSDoc comments to annotate functions, classes, and modules. This improves maintainability and generates API documentation.</li>
+                <li>Adopt clear, descriptive naming conventions and avoid overly “clever” code. Favor expressive code so that comments serve as supplementary explanations rather than a replacement for clarity.</li>
+            </ul>
+            <h3>Testing and TDD</h3>
+            <ul>
+                <li>Integrate testing frameworks (e.g., Jest for unit tests, React Testing Library for UI tests).</li>
+                <li>Write tests concurrently with feature development (Test-Driven Development, TDD) to serve as living documentation.</li>
+            </ul>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>6. Troubleshooting and FAQs</h2>
+            <h3>Common Issues</h3>
+            <ul>
+                <li><strong>Environment Configuration:</strong> Verify your <code>.env</code> file settings. Missing API keys or incorrect port settings can cause startup failures.</li>
+                <li><strong>Dependency Conflicts:</strong> Run <code>npm install</code> in each directory and check versions for compatibility.</li>
+                <li><strong>WASM Integration:</strong> Ensure that WASM modules are correctly compiled and loaded (check browser console and Node.js logs).</li>
+                <li><strong>Routing Issues:</strong> Confirm that Next.js API routes or Express routes are correctly registered.</li>
+            </ul>
+        </section>
+
+                <section id="database-integration">
+            <h2>7. Database Integration</h2>
+            <h3>Supported Databases</h3>
+            <p>TRENG+ offers seamless integration with a variety of databases for both relational and non-relational models including but not limited to:</p>
             <ul>
                 <li><strong>SQL Databases</strong> (e.g., PostgreSQL, MySQL)</li>
                 <li><strong>NoSQL Databases</strong> (e.g., MongoDB, Firebase)</li>
                 <li><strong>Real-Time Databases</strong> (e.g., Redis, Firebase)</li>
                 <li><strong>Graph Databases</strong> (e.g., Neo4j)</li>
             </ul>
+
+            <h3>Database Setup</h3>
+            <ol>
+                <li>Install the necessary database server (PostgreSQL, MongoDB, etc.) on your machine or use a cloud-based solution like AWS RDS or MongoDB Atlas.</li>
+                <li>Configure database connections in the <code>.env</code> file. Sample entries:</li>
+                <pre><code>DATABASE_URL=postgres://user:password@localhost:5432/database_name
+MONGO_URI=mongodb://localhost:27017/database_name</code></pre>
+                <li>Run the migration scripts (if applicable) to set up the schema.</li>
+                <pre><code># For PostgreSQL or MySQL
+npm run migrate
+# For MongoDB, manually seed data as needed</code></pre>
+            </ol>
         </section>
 
-        <section id="use-cases">
-            <h2>4. Ideal Use Cases for TRENG+</h2>
+        <section id="contribution">
+            <h2>8. Contribution Guidelines and Roadmap</h2>
+            <h3>Contributing to TRENG+</h3>
+            <p>We welcome contributions to TRENG+ from developers and enthusiasts who want to help grow the ecosystem. Whether you're fixing bugs, adding features, or improving documentation, we appreciate your help!</p>
+
+            <h3>Steps to Contribute</h3>
+            <ol>
+                <li>Fork the TRENG+ repository on GitHub.</li>
+                <li>Clone your fork locally using <code>git clone</code>.</li>
+                <li>Check out a new branch for your changes using <code>git checkout -b feature-branch</code>.</li>
+                <li>Make your changes and commit them using <code>git commit -m "Description of changes"</code>.</li>
+                <li>Push your changes to your fork using <code>git push origin feature-branch</code>.</li>
+                <li>Open a pull request to the main repository.</li>
+            </ol>
+
+            <h3>Code of Conduct</h3>
+            <p>By participating in this project, you agree to follow our <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>.</p>
+
+            <h3>Roadmap</h3>
+            <p>Our current roadmap focuses on improving performance, extending the features, and enhancing cloud deployment options.</a>.</p>
+        </section>
+
+        <section id="changelog">
+            <h2>9. Changelog</h2>
+            <p>Here you can find a detailed list of all changes made to TRENG+ over time:</p>
+            <h3>Version 1.0.0 - Initial Release</h3>
             <ul>
-                <li>Real-Time 3D Applications</li>
-                <li>Data Visualization Dashboards</li>
-                <li>Metaverse & AR/VR Projects</li>
-                <li>AI-Driven Interactive Experiences</li>
-                <li>Global Applications with Edge Computing</li>
+                <li>Initial setup of TRENG+ with frontend and backend integration.</li>
+                <li>3D rendering using Three.js and React Three Fiber.</li>
+                <li>Backend setup with Node.js and Express.js (optional), including API routes.</li>
+                <li>Initial optional database configuration.</li>
+            </ul>
+
+            <h3>Version 1.1.0 - Performance and Usability Enhancements</h3>
+            <ul>
+                <li>Optimized WebAssembly integration for faster computations.</li>
+                <li>New state management solutions (Redux, Zustand) for improved UI responsiveness.</li>
+                <li>Cloud deployment features with Fleek.</li>
             </ul>
         </section>
 
-        <section id="getting-started">
-            <h2>5. Getting Started</h2>
-            <h3>1. Environment Setup</h3>
+        <section id="resources">
+            <h2>10. Additional Resources</h2>
+            <p>Here is a set of additional resources that can help you further your knowledge of TRENG+ and related technologies:</p>
             <ul>
-                <li>Install Node.js and npm from nodejs.org.</li>
-                <li>Set up your project with npx create-next-app for a Next.js-based project.</li>
+                <li><a href="https://threejs.org/docs/">Three.js Documentation</a></li>
+                <li><a href="https://reactjs.org/docs/getting-started.html">React Documentation</a></li>
+                <li><a href="">React Three Fiber Documentation</a></li>
+                <li><a href="">React Three Drei Documentation</a></li>
+                <li><a href="">OpenGL Documentation</a></li>
+                <li><a href="">GLSL Documentation</a></li>
+                <li><a href="">WASM Documentation</a></li>
+                <li><a href="">Node.js Documentation</a></li>
+                <li><a href="">Express Documentation</a></li>
+                <li><a href="">Redux Documentation</a></li>
+                <li><a href="">Zustand Documentation</a></li>
+                <li><a href="">OAuth 2.0 Documentation</a></li>
+                <li><a href="">Fleek Documentation</a></li>
+                <li><a href="">WebGPU Documentation</a></li>
+                <li><a href="">MongoDB Documentation</a></li>
             </ul>
-            <h3>2. Integrate Core Technologies</h3>
-            <ul>
-                <li>Install Three.js and React Three Fiber: npm install three @react-three/fiber drei</li>
-                <li>Configure Express.js if you require advanced backend capabilities.</li>
-            </ul>
-            <h3>3. Implement WASM</h3>
-            <ul>
-                <li>Identify performance-critical tasks that could benefit from WebAssembly.</li>
-                <li>Compile code (e.g., in Rust or C++) to WASM and integrate it in your frontend or backend as needed.</li>
-            </ul>
-            <h3>4. Deploy Globally</h3>
-            <ul>
-                <li>Connect your GitHub repository to cloud edge platforms like Fleek, Cloudflare Workers, Netlify, or Vercel for automated, global deployments.</li>
-            </ul>
-            <h3>5. Optional – Database Setup</h3>
-            <ul>
-                <li>Choose and integrate a database if your application requires persistent data storage.</li>
-            </ul>
+        </section>
+
+        <section id="license">
+            <h2>11. License</h2>
+            <p>This project is licensed under the MIT License - see the <a href="LICENSE.md">LICENSE.md</a> file for details.</p>
         </section>
     </main>
 
     <footer>
-        <p>Created with ❤️ by Marquivion Orr | &copy; 2025 TRENG+. All rights reserved.</p>
+        <p>Created by Marquivion Orr | &copy; 2025 TRENG+. All Rights Reserved.</p>
     </footer>
+
 </body>
+
 </html>
