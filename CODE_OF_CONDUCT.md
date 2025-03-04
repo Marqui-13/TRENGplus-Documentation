@@ -21,7 +21,7 @@ The following actions are **not tolerated** in any form:
 
 ## 4. Reporting Violations
 If you experience or witness behavior that violates this Code of Conduct:  
-- Contact the project maintainers at **[your-email@example.com]**.  
+- Contact the project maintainers at **marquivionorr@proton.me**.  
 - Submit a private report via GitHub Issues with the label **"Code of Conduct Violation"** (if appropriate).  
 - Provide relevant details, including timestamps, context, and any supporting evidence.  
 
